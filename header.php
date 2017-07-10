@@ -28,8 +28,8 @@
 			</a>
 
 			<header>
-<?php // if (has_custom_logo()) :  ?>
-					<?php 
+				<?php // if (has_custom_logo()) :  ?>
+				<?php 
 					// get and set the custom logo image
 					// $custom_logo_id = get_theme_mod ('custom_logo');
 					// $custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
@@ -55,36 +55,61 @@
 				</span>
 				<?php // endif; ?>
 				<!--front page title-->
-				
+
 				<?php if (is_front_page() && is_home() ) : ?>
 
 				<h1 id="logo">
 					<!--esc_url sanitizes the url provided by home_url -->
 					<!--home_url provides the root url of the site-->
 					<a href="<?php echo esc_url (home_url('/')); ?>" rel="home">
-					 <?php bloginfo ('name'); ?></a>
-					</h1>
-					<?php endif; ?>
-					<?php 
+						<?php bloginfo ('name'); ?>
+					</a>
+				</h1>
+				<?php endif; ?>
+				<?php 
 					//site description
 					$description = get_bloginfo( 'description', 'display' );
 					// print the description is description is available
 					if ($description || is_customize_preview() ) : 
 					?>
-				<p><?php echo $description; ?></p>
+				<p>
+					<?php echo $description; ?>
+				</p>
 				<?php endif; ?>
 			</header>
 			<?php 
-			// getting menu items as an array
-
-			
+			// getting menu items as an object
+function yourprefix_get_menu_items($menu_name){
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+        $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+        return wp_get_nav_menu_items($menu->term_id);
+    }
+}
+$menu_items = yourprefix_get_menu_items ('main_menu');
+// echo "<pre>";
+// print_r($menu_items);
+// echo "</pre>";
 			?>
 			<nav id="nav">
 				<ul>
-					<li><a href="#one" class="active">About</a></li>
-					<li><a href="#two">Things I Can Do</a></li>
+					<?php if (isset ($menu_items) ) : ?>
+					<?php foreach ( (array) $menu_items as $key => $menu_item ) : ?>
+					<?php // $menu_item_array = get_object_vars($menu_item[$key]);
+						// $menu_object = $menu_item->$key;
+						// var_dump($menu_item);
+						
+/*					$try = get_object_vars ($menu_item);
+					var_dump($try);
+*/					 ?>
+					<li>
+						<a href="<?php  echo $menu_item->url;  ?>" ><?php echo $menu_item->post_title; ?></a>
+					</li>
+					<?php endforeach; ?>
+					<?php endif; ?>
+					<!--					<li><a href="#two">Things I Can Do</a></li>
 					<li><a href="#three">A Few Accomplishments</a></li>
 					<li><a href="#four">Contact</a></li>
+-->
 				</ul>
 			</nav>
 			<footer>
