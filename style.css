@@ -818,7 +818,6 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link{
 	display: inline-block;
-	border-bottom: none;
 }
 
 /*--------------------------------------------------------------
@@ -3984,3 +3983,8 @@ object {
 			}
 
 	}
+
+	/* Make sure there is no white line under logo link */
+.custom-logo-link{
+	border-bottom: none;
+}
