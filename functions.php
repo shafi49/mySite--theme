@@ -45,6 +45,7 @@ function mysite_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'main_menu' => esc_html__( 'Main Menu', 'mysite' ),
+		'social_links' => esc_html__('Social Links', 'mysite'),
 	) );
 
 	/*
