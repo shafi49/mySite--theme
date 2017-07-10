@@ -65,9 +65,20 @@
 					 <?php bloginfo ('name'); ?></a>
 					</h1>
 					<?php endif; ?>
-					
-				<p><?php bloginfo('description'); ?></p>
+					<?php 
+					//site description
+					$description = get_bloginfo( 'description', 'display' );
+					// print the description is description is available
+					if ($description || is_customize_preview() ) : 
+					?>
+				<p><?php echo $description; ?></p>
+				<?php endif; ?>
 			</header>
+			<?php 
+			// getting menu items as an array
+
+			
+			?>
 			<nav id="nav">
 				<ul>
 					<li><a href="#one" class="active">About</a></li>
