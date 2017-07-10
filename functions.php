@@ -120,6 +120,8 @@ function mysite_scripts() {
 	// some other stylesheets
 	//ie8_css
 	wp_enqueue_style ('ie8_css', get_stylesheet_directory_uri() . '/assets/css/ie8.css', array(), '', '');
+	// load the above script only if it is IE 9
+	wp_style_add_data( 'ie8_css', 'conditional', 'lte IE 8' );
 	//fontawesome_css
 	wp_enqueue_style ('fontawesome_css', get_stylesheet_directory_uri() . '/assets/css/font-awesome.min.css', array('ie8_css'), '', '');
 	//theme stylesheet
