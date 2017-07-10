@@ -11,21 +11,27 @@
 
 ?>
 <!DOCTYPE HTML>
-<html>
+<html <?php language_attributes(); ?>>
 	<head>
-		<title>Read Only by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class();?> >
 
 		<!-- Header -->
 			<section id="header">
+					<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mysite' ); ?></a>
+
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<span class="image avatar">
+<?php 
+// get and set the custom logo image
+$custom_logo_id = get_theme_mod ('custom_logo');
+$custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
+?>
+
+						<img src="<?php echo $custom_logo_src[0]; ?>" alt="" /></span>
 					<h1 id="logo"><a href="#">Willis Corto</a></h1>
 					<p>I got reprogrammed by a rogue AI<br />
 					and now I'm totally cray</p>
