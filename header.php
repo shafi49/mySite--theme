@@ -28,15 +28,16 @@
 			</a>
 
 			<header>
-				<span class="image avatar">
+<?php if (has_custom_logo()) :  ?>
 					<?php 
 					// get and set the custom logo image
 					$custom_logo_id = get_theme_mod ('custom_logo');
 					$custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
 					?>
-
+				<span class="image avatar">
 						<img src="<?php echo $custom_logo_src[0]; ?>" alt="" />
 				</span>
+				<?php endif; ?>
 				<!--front page title-->
 				
 				<?php if (is_front_page() && is_home() ) : ?>
