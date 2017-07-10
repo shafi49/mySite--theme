@@ -34,20 +34,26 @@
 					$custom_logo_id = get_theme_mod ('custom_logo');
 					$custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
 					?>
+					<a href="<?php esc_url (home_url('/')); ?>">
+
 				<span class="image avatar">
 						<img src="<?php echo $custom_logo_src[0]; ?>" alt="" />
 				</span>
+					</a>
 				<?php endif; ?>
 				<!--front page title-->
 				
 				<?php if (is_front_page() && is_home() ) : ?>
 
 				<h1 id="logo">
-					<!--esc_url() sanitizes the url provided by home_url -->
-					<!--home_url() provides the root url of the site-->
-					<a href="<?php echo esc_url (home_url('/')); ?>" rel="home"><?php bloginfo ('name'); ?></a></h1>
+					<!--esc_url sanitizes the url provided by home_url -->
+					<!--home_url provides the root url of the site-->
+					<a href="<?php echo esc_url (home_url('/')); ?>" rel="home">
+					 <?php bloginfo ('name'); ?></a>
+					</h1>
 					<?php endif; ?>
-				<p>I got reprogrammed by a rogue AI<br /> and now I'm totally cray</p>
+					
+				<p><?php bloginfo('description'); ?></p>
 			</header>
 			<nav id="nav">
 				<ul>
