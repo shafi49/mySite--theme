@@ -48,6 +48,8 @@ function mysite_setup() {
 		'social_links' => esc_html__('Social Links', 'mysite'),
 	) );
 
+
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

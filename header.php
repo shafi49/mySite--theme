@@ -79,13 +79,13 @@
 			</header>
 			<?php 
 			// getting menu items as an object
-function yourprefix_get_menu_items($menu_name){
+	function ms_get_menu_items($menu_name){
     if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
         $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
         return wp_get_nav_menu_items($menu->term_id);
-    }
-}
-$menu_items = yourprefix_get_menu_items ('main_menu');
+		}
+	}
+$menu_items = ms_get_menu_items ('main_menu');
 // echo "<pre>";
 // print_r($menu_items);
 // echo "</pre>";
@@ -106,19 +106,25 @@ $menu_items = yourprefix_get_menu_items ('main_menu');
 					</li>
 					<?php endforeach; ?>
 					<?php endif; ?>
-					<!--					<li><a href="#two">Things I Can Do</a></li>
-					<li><a href="#three">A Few Accomplishments</a></li>
-					<li><a href="#four">Contact</a></li>
--->
 				</ul>
 			</nav>
+			<?php 
+			// footer menu 
+			$social_links = ms_get_menu_items('social_links');
+			?>
 			<footer>
 				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					<?php if (isset($social_links)) : ?>
+					<?php foreach ($social_links as $key=>$social_link) : 
+					// this is for fontawesome fonts
+					// convert string to lowercase
+					$title = strtolower($social_link->post_title);
+					if ($title == "email") : 
+						$title = "envelope";
+					endif;
+					?>
+					<li><a href="<?php echo $social_link->url; ?>" class="icon fa-<?php echo $title; ?>"><span class="label"><?php echo $social_link->post_title; ?></span></a></li>
+					<?php endforeach; endif; ?>
 				</ul>
 			</footer>
 		</section>
