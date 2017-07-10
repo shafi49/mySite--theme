@@ -134,6 +134,26 @@ function mysite_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
+	//custom theme js files
+	// html5shiv_js
+	// load this script in the header
+	wp_enqueue_script ('html5shiv_js', get_template_directory_uri() . '/assets/js/ie/html5shiv.js', array(), '', false);
+	// load above script only if lower than IE 9
+	wp_script_add_data( 'html5shiv_js', 'conditional', 'lt IE 9' );
+	// scrollzer_js
+	wp_enqueue_script ('scrollzer_js', get_template_directory_uri() . '/assets/js/jquery.scrollzer.min.js', array('jquery'), '', true);
+	//scrolly_js
+	wp_enqueue_script ('scrolly_js', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('scrollzer_js'), '', true);
+	//skell_js
+	wp_enqueue_script ('skell_js', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('scrolly_js'), '', true);
+	//util_js
+	wp_enqueue_script ('util_js', get_template_directory_uri() . '/assets/js/util.js', array('skell_js'), '', true);
+	// respond_js
+	wp_enqueue_script ('respond_js', get_template_directory_uri() . '/assets/js/ie/respond.min.js', array('util_js'), '', true);
+	// load this script in an conditional tag
+	wp_script_add_data( 'respond_js', 'conditional', 'lt IE 9' );
+	// main_js
+	wp_enqueue_script ('main_js', get_template_directory_uri() . '/assets/js/main.js', array ('util_js'), '', true);
 }
 add_action( 'wp_enqueue_scripts', 'mysite_scripts' );
 
