@@ -144,10 +144,10 @@ function mysite_scripts() {
 	wp_enqueue_script ('scrollzer_js', get_template_directory_uri() . '/assets/js/jquery.scrollzer.min.js', array('jquery'), '', true);
 	//scrolly_js
 	wp_enqueue_script ('scrolly_js', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('scrollzer_js'), '', true);
-	//skell_js
-	wp_enqueue_script ('skell_js', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('scrolly_js'), '', true);
+	//skel_js
+	wp_enqueue_script ('skel_js', get_template_directory_uri() . '/assets/js/skel.min.js', array('scrolly_js'), '', true);
 	//util_js
-	wp_enqueue_script ('util_js', get_template_directory_uri() . '/assets/js/util.js', array('skell_js'), '', true);
+	wp_enqueue_script ('util_js', get_template_directory_uri() . '/assets/js/util.js', array('skel_js'), '', true);
 	// respond_js
 	wp_enqueue_script ('respond_js', get_template_directory_uri() . '/assets/js/ie/respond.min.js', array('util_js'), '', true);
 	// load this script in an conditional tag
