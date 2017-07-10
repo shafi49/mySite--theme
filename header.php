@@ -28,19 +28,32 @@
 			</a>
 
 			<header>
-<?php if (has_custom_logo()) :  ?>
+<?php // if (has_custom_logo()) :  ?>
 					<?php 
 					// get and set the custom logo image
-					$custom_logo_id = get_theme_mod ('custom_logo');
-					$custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
+					// $custom_logo_id = get_theme_mod ('custom_logo');
+					// $custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
+					// custom logo alt 
+					// get_post_meta ('id_of_post', 'data_to_retrieve', 'whether_the_value_or_an_array')
+					// $custom_logo_alt = get_post_meta ($custom_logo_id, '_wp_attachment_image_alt', true);
+        // if no alt text is set set the site title as the alt text
+/*				if ( empty( $image_alt ) ) {
+            $custom_logo_attr['alt'] = get_bloginfo( 'name', 'display' );
+        }
+*/					
 					?>
-
 				<span class="image avatar">
-					<a href="<?php esc_url (home_url('/')); ?>">
-						<img src="<?php echo $custom_logo_src[0]; ?>" alt="" />
-					</a>
+<!--					<a href="<?php // esc_url (home_url('/')); ?>">
+--><!--						<img src="<?php // echo $custom_logo_src[0]; ?>" alt="<?php // echo $custom_logo_alt; ?>">
+-->
+					
+<!--					</a>
+-->
+					<?php the_custom_logo(); ?>
+
+
 				</span>
-				<?php endif; ?>
+				<?php // endif; ?>
 				<!--front page title-->
 				
 				<?php if (is_front_page() && is_home() ) : ?>
