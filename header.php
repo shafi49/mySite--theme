@@ -34,12 +34,12 @@
 					$custom_logo_id = get_theme_mod ('custom_logo');
 					$custom_logo_src = wp_get_attachment_image_src ($custom_logo_id, 'full');
 					?>
-					<a href="<?php esc_url (home_url('/')); ?>">
 
 				<span class="image avatar">
+					<a href="<?php esc_url (home_url('/')); ?>">
 						<img src="<?php echo $custom_logo_src[0]; ?>" alt="" />
-				</span>
 					</a>
+				</span>
 				<?php endif; ?>
 				<!--front page title-->
 				
