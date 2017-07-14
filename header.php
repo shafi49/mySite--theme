@@ -128,3 +128,5 @@ $main_menu_args = array (
 				</ul>
 			</footer>
 		</section>
+			<!-- Wrapper -->
+	<div id="wrapper">

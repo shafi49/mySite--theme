@@ -13,17 +13,19 @@
  */
 
 get_header(); ?>
-	<!-- Wrapper -->
-	<div id="wrapper">
-
+<!-- div.wrapper in header.php -->
 		<!-- Main -->
 		<div id="main">
-
-			<!-- One -->
+<?php if (have_posts() ) :?>
 			<section id="one">
 				<div class="container">
+					<?php if (is_home() && ! is_front_page() ) : ?>
 					<header class="major">
-						<h2>Read Only</h2>
+						<h2><?php single_post_title(); ?></h2>
+						<?php endif; 
+							/* start the loop */
+								while (have_posts() ) : the_post();
+						?>
 						<p>Just an incredibly simple responsive site<br /> template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
 					</header>
 					<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan
@@ -32,8 +34,9 @@ get_header(); ?>
 						elementum.</p>
 				</div>
 			</section>
+
 	</div>
 	<!-- Wrapper end -->
 			<?php
-get_sidebar();
+// get_sidebar();
 get_footer();
