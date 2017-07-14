@@ -13,44 +13,27 @@
  */
 
 get_header(); ?>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<!-- Main -->
+		<div id="main">
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
+			<!-- One -->
+			<section id="one">
+				<div class="container">
+					<header class="major">
+						<h2>Read Only</h2>
+						<p>Just an incredibly simple responsive site<br /> template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
+					</header>
+					<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan
+						erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc
+						integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia
+						elementum.</p>
+				</div>
+			</section>
+	</div>
+	<!-- Wrapper end -->
 			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
 get_sidebar();
 get_footer();
