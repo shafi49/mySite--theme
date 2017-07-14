@@ -17,7 +17,7 @@
 			<section id="footer">
 				<div class="container">
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>My Site <a href="<?php echo esc_url(home_url('/')) ; ?>">Sailor</a></li>
+						<li>&copy; Shafi. All rights reserved.</li><li>My Site by <a href="<?php echo esc_url(home_url('/')) ; ?>">Sailor</a></li>
 					</ul>
 				</div>
 			</section>

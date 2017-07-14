@@ -31,7 +31,7 @@
 			<!-- .entry-header -->
 			<div class="entry-content">
 				<?php 
-					the_content(
+					the_excerpt(
 						/* translators: %s: Name of current post. Only visible to screen readers */
 						sprintf (
 							wp_kses (__('Continue reading<span class="screen-reader-text">"%s"</span>', 'mysite'),
