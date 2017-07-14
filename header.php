@@ -103,12 +103,14 @@ $main_menu_args = array (
 	'walker' => '',
 	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 );
+
 ?>
 <?php wp_nav_menu( $main_menu_args ); ?>
 
 			<?php 
 			// footer menu 
 			$social_links = ms_get_menu_items('social_links');
+
 			?>
 			<footer>
 				<ul class="icons">
