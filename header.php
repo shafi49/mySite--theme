@@ -85,29 +85,27 @@
         return wp_get_nav_menu_items($menu->term_id);
 		}
 	}
-// $menu_items = ms_get_menu_items ('main_menu');
-// echo "<pre>";
-// print_r($menu_items);
-// echo "</pre>";
-			?>
-			<nav id="nav">
-				<ul>
-					<?php // if (isset ($menu_items) ) : ?>
-					<?php // foreach ( (array) $menu_items as $key => $menu_item ) : ?>
-					<?php // $menu_item_array = get_object_vars($menu_item[$key]);
-						// $menu_object = $menu_item->$key;
-						// var_dump($menu_item);
-						
-/*					$try = get_object_vars ($menu_item);
-					var_dump($try);
-*/					 ?>
-					<li>
-						<a href="<?php // echo $menu_item->url;  ?>" ><?php // echo $menu_item->post_title; ?></a>
-					</li>
-					<?php // endforeach; ?>
-					<?php // endif; ?>
-				</ul>
-			</nav>
+// wp_nav_menu() arguments
+$main_menu_args = array (
+	'menu' => 'main_menu',
+	'menu_class' => '',
+	'menu_id' => '',
+	'container' => 'nav',
+	'container_class' => '',
+	'container_id' => 'nav',
+	'fallback_cb' => '',
+	'before' => '',
+	'after' => '',
+	'link_before' => '',
+	'link_after' => '',
+	'echo' => true,
+	'depth' => '',
+	'walker' => '',
+	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+);
+?>
+<?php wp_nav_menu( $main_menu_args ); ?>
+
 			<?php 
 			// footer menu 
 			$social_links = ms_get_menu_items('social_links');
