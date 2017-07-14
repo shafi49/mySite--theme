@@ -17,26 +17,26 @@ get_header(); ?>
 		<!-- Main -->
 		<div id="main">
 <?php if (have_posts() ) :?>
-			<section id="one">
-				<div class="container">
 					<?php if (is_home() && ! is_front_page() ) : ?>
 					<header class="major">
 						<h2><?php single_post_title(); ?></h2>
 						<?php endif; 
 							/* start the loop */
 								while (have_posts() ) : the_post();
-						?>
-						<p>Just an incredibly simple responsive site<br /> template freebie by <a href="http://html5up.net">HTML5 UP</a>.</p>
-					</header>
-					<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan
-						erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc
-						integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia
-						elementum.</p>
-				</div>
-			</section>
+get_template_part('template-parts/content', get_post_format() );
+
+endwhile;
+the_posts_navigation(); 
+
+else : 
+
+get_template_part ('template_parts/content', 'none');
+
+endif; 
+?>
 
 	</div>
 	<!-- Wrapper end -->
-			<?php
+	<?php
 // get_sidebar();
 get_footer();
