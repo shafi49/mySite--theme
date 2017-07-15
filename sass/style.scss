@@ -104,3 +104,73 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+// import html templates main.css 
+@import "../assets/css/main";
+// @import "../assets/css/font-awesome.min";
+
+
+// mysite specific styles
+
+	/* Make sure there is no white line under logo link */
+.custom-logo-link{
+	border-bottom: none;
+}
+
+/* single page title */
+.entry-header .entry-title {
+    font-size: 2em;
+}
+
+/* footer in archive pages gets the full width */
+section#footer {
+	overflow: initial;
+}
+/*  foundation button class */
+.button, .nav-links a {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0rem 1rem 0rem;
+    font-family: inherit;
+    padding: 0.85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 2%;
+    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 0.9rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1779ba;
+		color: #fefefe;
+}
+
+.nav-links a {
+	background-color: #4acaa8;
+	margin: 0 1rem 0rem 1rem;
+}
+
+/* style when hovering over button */
+.nav-links a:hover,.nav-links a:focus, .button:hover, .button:focus,  {
+    background-color: #14679e;
+		color: #fefefe;
+}
+
+/* styling for comments template */
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+	
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

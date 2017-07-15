@@ -126,7 +126,8 @@ function mysite_scripts() {
 	// load the above script only if it is IE 9
 	wp_style_add_data( 'ie8_css', 'conditional', 'lte IE 8' );
 	//fontawesome_css
-	wp_enqueue_style ('fontawesome_css', get_stylesheet_directory_uri() . '/assets/css/font-awesome.min.css', array('ie8_css'), '', '');
+	wp_enqueue_style ('fontawesome_css', get_stylesheet_directory_uri() . '/assets/css/_font-awesome.min.css', array('ie8_css'), '', '');
+	wp_enqueue_style ('google_font', 'https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400', array('ie8_css'), '', '');
 	//theme stylesheet
 	wp_enqueue_style( 'mysite-style', get_stylesheet_uri(), array('fontawesome_css', 'ie8_css'), '', '');
 
