@@ -3988,3 +3988,8 @@ object {
 .custom-logo-link{
 	border-bottom: none;
 }
+
+/* single page title */
+.entry-header .entry-title {
+    font-size: 2em;
+}

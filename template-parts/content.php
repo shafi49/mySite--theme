@@ -31,8 +31,9 @@
 			<!-- .entry-header -->
 			<div class="entry-content">
 				<?php 
-					the_excerpt(
-						/* translators: %s: Name of current post. Only visible to screen readers */
+				// content to be displayed
+				$content =
+				/* translators: %s: Name of current post. Only visible to screen readers */
 						sprintf (
 							wp_kses (__('Continue reading<span class="screen-reader-text">"%s"</span>', 'mysite'),
 							array(
@@ -42,8 +43,11 @@
 							)
 							), 
 							get_the_title()
-						)
-					);
+						);
+
+// time to print the content
+print_the_content ($content);
+
 wp_link_pages(
 	array(
 		'before' => '<div class="page-links">' .esc_html__(

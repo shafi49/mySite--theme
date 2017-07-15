@@ -100,3 +100,18 @@ function mysite_entry_footer() {
 	);
 }
 endif;
+
+// show excerpt while displaying many posts
+// show content while displaying single post
+				
+				function print_the_content ($content) {
+					if ( is_single() ) {
+					// if it is single post display whole content
+						sprintf ( the_content( $content ) );
+					}
+					else {
+						// if not single post show only excerpt
+						sprintf (the_excerpt( $content ));
+					}
+				}
+
