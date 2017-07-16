@@ -1,0 +1,57 @@
+/*
+Error: File to import not found or unreadable: ../assets/css/main.
+       Load path: D:/xampp/htdocs/mySite/wp-content/themes/mySite/sass
+        on line 104 of D:\xampp\htdocs\mySite\wp-content\themes\mySite\sass\style.scss
+
+99: # Media
+100: --------------------------------------------------------------*\/
+101: @import "media/media";
+102: 
+103: // import html templates main.css 
+104: @import "../assets/css/main";
+105: 
+106: /*  import foundation scss files *\/
+107: @import "../lib/node_modules/foundation-sites/scss/foundation";
+108: 
+109: // @import "../assets/css/font-awesome.min";
+
+Backtrace:
+D:\xampp\htdocs\mySite\wp-content\themes\mySite\sass\style.scss:104
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+D:/Portable Apps/Koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+D:/Portable Apps/Koala/bin/sass:18:in `load'
+D:/Portable Apps/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../assets/css/main.\A        Load path: D:/xampp/htdocs/mySite/wp-content/themes/mySite/sass\A         on line 104 of D:\xampp\htdocs\mySite\wp-content\themes\mySite\sass\style.scss\A \A 99: # Media\A 100: --------------------------------------------------------------*/\A 101: @import \"media/media\";\A 102: \A 103: // import html templates main.css \A 104: @import \"../assets/css/main\";\A 105: \A 106: /*  import foundation scss files */\A 107: @import \"../lib/node_modules/foundation-sites/scss/foundation\";\A 108: \A 109: // @import \"../assets/css/font-awesome.min\";"; }

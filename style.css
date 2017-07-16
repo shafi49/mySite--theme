@@ -33,7 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Infinite scroll
 # Media
 	## Captions
-	## Galleries
+    ## Galleries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -2885,6 +2885,13 @@ input[type="button"]:disabled,
   .button {
     padding: 0; } }
 
+/*  import foundation scss files */
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.4.1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
 /* Make sure there is no white line under logo link */
 .custom-logo-link {
   border-bottom: none; }
@@ -2898,15 +2905,15 @@ section#footer {
   overflow: initial; }
 
 /*  foundation button class */
-.button, .nav-links a {
+.nav-links a {
   display: inline-block;
   vertical-align: middle;
-  margin: 0 0rem 1rem 0rem;
+  margin: 0 0 1rem 0;
   font-family: inherit;
   padding: 0.85em 1em;
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: 2%;
+  border-radius: 0;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   -o-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -2914,23 +2921,16 @@ section#footer {
   line-height: 1;
   text-align: center;
   cursor: pointer;
-  background-color: #1779ba;
-  color: #fefefe; }
-
-.nav-links a {
-  background-color: #4acaa8;
+  background-color: #4ACAA8;
+  color: #fefefe;
   margin: 0 1rem 0rem 1rem; }
+  [data-whatinput='mouse'] .nav-links a {
+    outline: 0; }
+  .nav-links a:hover, .nav-links a:focus {
+    background-color: #35b593;
+    color: #fefefe; }
 
 /* style when hovering over button */
-.nav-links a:hover, .nav-links a:focus, .button:hover, .button:focus {
-  background-color: #14679e;
-  color: #fefefe; }
-
 /* styling for comments template */
-/* Small only */
-/* Medium and up */
-/* Medium only */
-/* Large and up */
-/* Large only */
 
 /*# sourceMappingURL=style.css.map */
