@@ -126,15 +126,24 @@ section#footer {
 }
 /*  foundation button class */
 
-.nav-links a {
-	// @extend .button;
+// button placeholder class
+%button {
 	@include button();
+}
+%button-small {
+	font-size: map-get($button-sizes, 'small');
+}
+.nav-links a {
+	@extend %button;
+	@extend %button-small;
+	// @extend .small;
 	// @extend .small;
 	// @include button-hollow();
 	// color: $primary-color;
 	margin: 0 1rem 0rem 1rem;
 }
 
+/* styling for comments template */
 .comments-area {
 	@include grid-column-row();
 	// color: $turquoise;
@@ -153,7 +162,7 @@ section#footer {
 
 .comment-form {
 	input[name="submit"] {
-		@include button();
+		@extend %button;
 	}
 }
 
@@ -171,9 +180,47 @@ section#footer {
 	}
 }
 
-a:visited {
-	color: #3f886f;
+		
+a {
+	&:visited {
+		color: $visited-color;
+	}
 }
-/* style when hovering over button */
+a:visited {
+	:hover {
+				color: $primary-color;
+			}
+}
+ a:hover {
+	 color: $primary-color;
+ }
+	div.nav-links {
+		a {
+		&:visited {
+			color: $button-color;
+		}
+		}
+	}
+/* style for archive page */
+.page-header {
+// .comments-area has  @include grid-row();
+	@extend .comments-area;
+	background-color: $primary-color;
+	// padding: rem-calc(32px) 0;
+		.page-title {
+			color: $white;
+			margin:  10px 0px 10px 0px;
+	}
+}
+// overriding wraper top padding
+#wrapper {
+	padding-top: 0;
+}
 
-/* styling for comments template */
+.placeholder {
+	// @include foundation-button();
+	// @include button();
+	// font-size: map-get($button-sizes, 'small');
+}
+
+/* style when hovering over button */

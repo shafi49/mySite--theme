@@ -2892,6 +2892,7 @@ input[type="button"]:disabled,
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+/* foundation normalize */
 /* Make sure there is no white line under logo link */
 .custom-logo-link {
   border-bottom: none; }
@@ -2905,67 +2906,7 @@ section#footer {
   overflow: initial; }
 
 /*  foundation button class */
-.nav-links a {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 1rem 0;
-  font-family: inherit;
-  padding: 0.85em 1em;
-  -webkit-appearance: none;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  -o-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
-  line-height: 1;
-  text-align: center;
-  cursor: pointer;
-  background-color: #4ACAA8;
-  color: #fefefe;
-  margin: 0 1rem 0rem 1rem; }
-  [data-whatinput='mouse'] .nav-links a {
-    outline: 0; }
-  .nav-links a:hover, .nav-links a:focus {
-    background-color: #35b593;
-    color: #fefefe; }
-
-.comments-area {
-  max-width: 75rem;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-  float: left;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem; }
-  .comments-area::before, .comments-area::after {
-    display: table;
-    content: ' ';
-    -webkit-flex-basis: 0;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1; }
-  .comments-area::after {
-    clear: both; }
-  @media print, screen and (min-width: 40em) {
-    .comments-area {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-  .comments-area:last-child:not(:first-child) {
-    float: right; }
-  .comments-area, .comments-area:last-child {
-    float: none; }
-  .comments-area > .comments-title {
-    color: #22cfd3;
-    font-size: 1.5rem; }
-  .comments-area > ol.comment-list li,
-  .comments-area b {
-    color: #14797b; }
-
-.comment-form input[name="submit"] {
+.nav-links a, .comment-form input[name="submit"] {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -2983,19 +2924,79 @@ section#footer {
   cursor: pointer;
   background-color: #4ACAA8;
   color: #fefefe; }
-  [data-whatinput='mouse'] .comment-form input[name="submit"] {
+  [data-whatinput='mouse'] .nav-links a, .nav-links [data-whatinput='mouse'] a, [data-whatinput='mouse'] .comment-form input[name="submit"], .comment-form [data-whatinput='mouse'] input[name="submit"] {
     outline: 0; }
-  .comment-form input[name="submit"]:hover, .comment-form input[name="submit"]:focus {
+  .nav-links a:hover, .comment-form input[name="submit"]:hover, .nav-links a:focus, .comment-form input[name="submit"]:focus {
     background-color: #35b593;
     color: #fefefe; }
+
+.nav-links a {
+  font-size: 0.75rem; }
+
+.nav-links a {
+  margin: 0 1rem 0rem 1rem; }
+
+/* styling for comments template */
+.comments-area, .page-header {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem; }
+  .comments-area::before, .page-header::before, .comments-area::after, .page-header::after {
+    display: table;
+    content: ' ';
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .comments-area::after, .page-header::after {
+    clear: both; }
+  @media print, screen and (min-width: 40em) {
+    .comments-area, .page-header {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .comments-area:last-child:not(:first-child), .page-header:last-child:not(:first-child) {
+    float: right; }
+  .comments-area, .page-header, .comments-area:last-child, .page-header:last-child {
+    float: none; }
+  .comments-area > .comments-title, .page-header > .comments-title {
+    color: #22cfd3;
+    font-size: 1.5rem; }
+  .comments-area > ol.comment-list li, .page-header > ol.comment-list li,
+  .comments-area b, .page-header b {
+    color: #14797b; }
 
 .comment-respond .comment-reply-title, .comment-respond > form p, .comment-respond > form label {
   color: #157d7f; }
 
 a:visited {
-  color: darken #15e0a0, 50%; }
+  color: #83bdae; }
+
+a:visited :hover {
+  color: #4ACAA8; }
+
+a:hover {
+  color: #4ACAA8; }
+
+div.nav-links a:visited {
+  color: #fefefe; }
+
+/* style for archive page */
+.page-header {
+  background-color: #4ACAA8; }
+  .page-header .page-title {
+    color: #fefefe;
+    margin: 10px 0px 10px 0px; }
+
+#wrapper {
+  padding-top: 0; }
 
 /* style when hovering over button */
-/* styling for comments template */
 
 /*# sourceMappingURL=style.css.map */
