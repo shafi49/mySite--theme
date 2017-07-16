@@ -100,7 +100,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "media/media";
 
-// import html templates main.css 
+// import html templates main.css
 @import "../assets/css/main";
 
 /*  import foundation scss files */
@@ -110,14 +110,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // mysite specific styles
 
-	/* Make sure there is no white line under logo link */
-.custom-logo-link{
+/* Make sure there is no white line under logo link */
+.custom-logo-link {
 	border-bottom: none;
 }
 
 /* single page title */
 .entry-header .entry-title {
-    font-size: 2em;
+	font-size: 2em;
 }
 
 /* footer in archive pages gets the full width */
@@ -127,56 +127,53 @@ section#footer {
 /*  foundation button class */
 
 .nav-links a {
-    // @extend .button;
-    @include button();
-    // @extend .small;
-    // @include button-hollow();
-    // color: $primary-color;
-    margin: 0 1rem 0rem 1rem;
+	// @extend .button;
+	@include button();
+	// @extend .small;
+	// @include button-hollow();
+	// color: $primary-color;
+	margin: 0 1rem 0rem 1rem;
 }
 
 .comments-area {
+	@include grid-column-row();
+	// color: $turquoise;
 
-        @include grid-column-row();
-        // color: $turquoise;
-
-    &>.comments-title {
-        color: darken($turquoise, 10%);
-        font: {
-            size: rem-calc(24px);
-        }
-    }
-    &>ol.comment-list li, b {
-        color: darken($turquoise, 30%);
-    }
+	& > .comments-title {
+		color: darken($turquoise, 10%);
+		font: {
+			size: rem-calc(24px);
+		}
+	}
+	& > ol.comment-list li,
+	b {
+		color: darken($turquoise, 30%);
+	}
 }
 
 .comment-form {
-    input[name="submit"] {
-        @include button();
-        
-    }
+	input[name="submit"] {
+		@include button();
+	}
 }
 
 .comment-respond {
-    .comment-reply-title {
-        color: scale-color($turquoise, $lightness: -50%);
-    }
-    &>form {
-        p {
-        @extend .comment-reply-title;
-        }
-    label {
-        @extend .comment-reply-title;
-    }
-    }
+	.comment-reply-title {
+		color: scale-color($turquoise, $lightness: -50%);
+	}
+	& > form {
+		p {
+			@extend .comment-reply-title;
+		}
+		label {
+			@extend .comment-reply-title;
+		}
+	}
 }
 
 a:visited {
-    color: map-get($foundation-palette, visited);
+	color: map-get($foundation-palette, visited);
 }
 /* style when hovering over button */
-
-
 
 /* styling for comments template */

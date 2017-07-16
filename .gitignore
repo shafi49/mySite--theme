@@ -1,2 +1,6 @@
 
 .vscode/settings.json
+prepros-6.config
+style.css
+style.css.map
+.gitignore

@@ -2961,7 +2961,8 @@ section#footer {
   .comments-area > .comments-title {
     color: #22cfd3;
     font-size: 1.5rem; }
-  .comments-area > ol.comment-list li, .comments-area b {
+  .comments-area > ol.comment-list li,
+  .comments-area b {
     color: #14797b; }
 
 .comment-form input[name="submit"] {
