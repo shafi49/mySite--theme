@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "foundation-sites": "^6.4.1"
   }
 }
