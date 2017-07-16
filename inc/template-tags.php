@@ -23,11 +23,16 @@ function mysite_posted_on() {
 		esc_attr( get_the_modified_date( 'c' ) ),
 		esc_html( get_the_modified_date() )
 	);
+// get the year, month and the day on which post was posted
+$archive_year =get_the_date('Y') ;
+$archive_month = get_the_date('m') ;
+$archive_day = get_the_date('d') ;
 
 	$posted_on = sprintf(
 		/* translators: %s: post date. */
 		esc_html_x( 'Posted on %s', 'post date', 'mysite' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		// '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="' . esc_url( get_day_link( $archive_year, $archive_month, $archive_day ) ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
@@ -114,4 +119,3 @@ endif;
 						sprintf (the_excerpt( $content ));
 					}
 				}
-

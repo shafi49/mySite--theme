@@ -160,8 +160,14 @@ section#footer {
 	}
 }
 
+/*  comment form, search form button*/
 .comment-form {
-	input[name="submit"] {
+	input[type="submit"] {
+		@extend %button;
+	}
+}
+form.search-form {
+	input[type="submit"] {
 		@extend %button;
 	}
 }
@@ -214,6 +220,11 @@ a:visited {
 }
 // overriding wraper top padding
 #wrapper {
+	padding-top: 0;
+}
+
+/* error-404 not-found container padding-top override */
+#main > .error-404.not-found > .container {
 	padding-top: 0;
 }
 

@@ -2906,7 +2906,7 @@ section#footer {
   overflow: initial; }
 
 /*  foundation button class */
-.nav-links a, .comment-form input[name="submit"] {
+.nav-links a, .comment-form input[type="submit"], form.search-form input[type="submit"] {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -2924,9 +2924,9 @@ section#footer {
   cursor: pointer;
   background-color: #4ACAA8;
   color: #fefefe; }
-  [data-whatinput='mouse'] .nav-links a, .nav-links [data-whatinput='mouse'] a, [data-whatinput='mouse'] .comment-form input[name="submit"], .comment-form [data-whatinput='mouse'] input[name="submit"] {
+  [data-whatinput='mouse'] .nav-links a, .nav-links [data-whatinput='mouse'] a, [data-whatinput='mouse'] .comment-form input[type="submit"], .comment-form [data-whatinput='mouse'] input[type="submit"], [data-whatinput='mouse'] form.search-form input[type="submit"], form.search-form [data-whatinput='mouse'] input[type="submit"] {
     outline: 0; }
-  .nav-links a:hover, .comment-form input[name="submit"]:hover, .nav-links a:focus, .comment-form input[name="submit"]:focus {
+  .nav-links a:hover, .comment-form input[type="submit"]:hover, form.search-form input[type="submit"]:hover, .nav-links a:focus, .comment-form input[type="submit"]:focus, form.search-form input[type="submit"]:focus {
     background-color: #35b593;
     color: #fefefe; }
 
@@ -2972,6 +2972,7 @@ section#footer {
   .comments-area b, .page-header b {
     color: #14797b; }
 
+/*  comment form, search form button*/
 .comment-respond .comment-reply-title, .comment-respond > form p, .comment-respond > form label {
   color: #157d7f; }
 
@@ -2995,6 +2996,10 @@ div.nav-links a:visited {
     margin: 10px 0px 10px 0px; }
 
 #wrapper {
+  padding-top: 0; }
+
+/* error-404 not-found container padding-top override */
+#main > .error-404.not-found > .container {
   padding-top: 0; }
 
 /* style when hovering over button */

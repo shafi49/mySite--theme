@@ -19,14 +19,14 @@
 					endif;
 
 					// check if any post exists
-			if ( 'post' === get_post_type() ) : ?>	
-			<div class="entry-meta">
-			<?php 
+			if ( 'post' === get_post_type() ) : ?>
+				<div class="entry-meta">
+					<?php 
 			// display the time the post was posted
 			mysite_posted_on(); ?>
-			</div>
-			<!-- .entry-meta  -->
-			<?php endif; ?>
+				</div>
+				<!-- .entry-meta  -->
+				<?php endif; ?>
 			</header>
 			<!-- .entry-header -->
 			<div class="entry-content">
@@ -46,6 +46,7 @@
 						);
 
 // time to print the content
+// display only excerpt on blog page and whole content on single page
 print_the_content ($content);
 
 wp_link_pages(
@@ -57,9 +58,8 @@ wp_link_pages(
 	)
 );
 ?>
-</div>
-<!-- .entry-content -->
+			</div>
+			<!-- .entry-content -->
 		</div>
 		<!-- .container -->
 	</section>
-

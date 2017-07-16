@@ -20,7 +20,7 @@ get_header(); ?>
 		<header class="page-header">
  			<div class="container">
  				<?php 
-				the_archive_title('<h2 class="page-title">', '</h2>');
+				the_archive_title('<h2 class="page-title"> Posted on the ', '</h2>');
 				the_archive_description( '<div class="archive-description">', '</div>' );		
 				?>
  			</div>
