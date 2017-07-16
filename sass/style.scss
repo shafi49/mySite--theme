@@ -104,7 +104,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "../assets/css/main";
 
 /*  import foundation scss files */
-@import "../lib/node_modules/foundation-sites/scss/foundation";
+@import "./foundation-sass/foundation";
 
 // @import "../assets/css/font-awesome.min";
 
@@ -172,7 +172,7 @@ section#footer {
 }
 
 a:visited {
-	color: darken (map-get($foundation-palette, visited), 50%);
+	color: #3f886f;
 }
 /* style when hovering over button */
 
