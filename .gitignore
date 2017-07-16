@@ -1,6 +1,6 @@
 
 .vscode/settings.json
 prepros-6.config
+.gitignore
 style.css
 style.css.map
-.gitignore

@@ -172,7 +172,7 @@ section#footer {
 }
 
 a:visited {
-	color: map-get($foundation-palette, visited);
+	color: darken (map-get($foundation-palette, visited), 50%);
 }
 /* style when hovering over button */
 

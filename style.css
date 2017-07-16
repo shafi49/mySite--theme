@@ -2993,7 +2993,7 @@ section#footer {
   color: #157d7f; }
 
 a:visited {
-  color: #15e0a0; }
+  color: darken #15e0a0, 50%; }
 
 /* style when hovering over button */
 /* styling for comments template */
