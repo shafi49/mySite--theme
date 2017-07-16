@@ -129,11 +129,52 @@ section#footer {
 .nav-links a {
     // @extend .button;
     @include button();
+    // @extend .small;
     // @include button-hollow();
     // color: $primary-color;
     margin: 0 1rem 0rem 1rem;
 }
 
+.comments-area {
+
+        @include grid-column-row();
+        // color: $turquoise;
+
+    &>.comments-title {
+        color: darken($turquoise, 10%);
+        font: {
+            size: rem-calc(24px);
+        }
+    }
+    &>ol.comment-list li, b {
+        color: darken($turquoise, 30%);
+    }
+}
+
+.comment-form {
+    input[name="submit"] {
+        @include button();
+        
+    }
+}
+
+.comment-respond {
+    .comment-reply-title {
+        color: scale-color($turquoise, $lightness: -50%);
+    }
+    &>form {
+        p {
+        @extend .comment-reply-title;
+        }
+    label {
+        @extend .comment-reply-title;
+    }
+    }
+}
+
+a:visited {
+    color: map-get($foundation-palette, visited);
+}
 /* style when hovering over button */
 
 

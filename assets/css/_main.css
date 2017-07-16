@@ -1574,7 +1574,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #4acaa8 !important;
+			color: #4acaa8;
 		}
 
 	strong, b {
@@ -2280,7 +2280,7 @@
 		background-color: #989898;
 		border-radius: 5px;
 		border: 0;
-		color: #ffffff !important;
+		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 700;
@@ -2297,7 +2297,7 @@
 		input[type="button"]:hover,
 		.button:hover {
 			background-color: #a5a5a5;
-			color: #ffffff !important;
+			color: #ffffff;
 		}
 
 		input[type="submit"]:active,
@@ -2489,7 +2489,7 @@
 		}
 
 			#header a:hover {
-				color: #ffffff !important;
+				color: #ffffff;
 			}
 
 		#header > header {
@@ -2561,7 +2561,7 @@
 						-ms-transition: none;
 						transition: none;
 						border: 0;
-						color: #ffffff !important;
+						color: #ffffff;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
@@ -2569,7 +2569,7 @@
 
 						#header > nav ul li a.active {
 							background: #fff;
-							color: #4acaa8 !important;
+							color: #4acaa8;
 						}
 
 					#header > nav ul li:first-child {

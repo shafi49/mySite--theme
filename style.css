@@ -1688,7 +1688,7 @@ a {
 
 a:hover {
   border-bottom-color: transparent;
-  color: #4acaa8 !important; }
+  color: #4acaa8; }
 
 strong, b {
   color: #777;
@@ -2276,7 +2276,7 @@ input[type="button"],
   background-color: #989898;
   border-radius: 5px;
   border: 0;
-  color: #ffffff !important;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
@@ -2292,7 +2292,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
   background-color: #a5a5a5;
-  color: #ffffff !important; }
+  color: #ffffff; }
 
 input[type="submit"]:active,
 input[type="reset"]:active,
@@ -2464,7 +2464,7 @@ input[type="button"]:disabled,
   color: #d1f1e9; }
 
 #header a:hover {
-  color: #ffffff !important; }
+  color: #ffffff; }
 
 #header > header {
   -moz-flex-shrink: 0;
@@ -2530,14 +2530,14 @@ input[type="button"]:disabled,
   -o-transition: none;
   transition: none;
   border: 0;
-  color: #ffffff !important;
+  color: #ffffff;
   display: block;
   padding: 0.85em 0;
   text-decoration: none; }
 
 #header > nav ul li a.active {
   background: #fff;
-  color: #4acaa8 !important; }
+  color: #4acaa8; }
 
 #header > nav ul li:first-child {
   border-top: 0; }
@@ -2913,7 +2913,7 @@ section#footer {
   padding: 0.85em 1em;
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 5px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   -o-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -2929,6 +2929,70 @@ section#footer {
   .nav-links a:hover, .nav-links a:focus {
     background-color: #35b593;
     color: #fefefe; }
+
+.comments-area {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem; }
+  .comments-area::before, .comments-area::after {
+    display: table;
+    content: ' ';
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .comments-area::after {
+    clear: both; }
+  @media print, screen and (min-width: 40em) {
+    .comments-area {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .comments-area:last-child:not(:first-child) {
+    float: right; }
+  .comments-area, .comments-area:last-child {
+    float: none; }
+  .comments-area > .comments-title {
+    color: #22cfd3;
+    font-size: 1.5rem; }
+  .comments-area > ol.comment-list li, .comments-area b {
+    color: #14797b; }
+
+.comment-form input[name="submit"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  font-family: inherit;
+  padding: 0.85em 1em;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  -o-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  background-color: #4ACAA8;
+  color: #fefefe; }
+  [data-whatinput='mouse'] .comment-form input[name="submit"] {
+    outline: 0; }
+  .comment-form input[name="submit"]:hover, .comment-form input[name="submit"]:focus {
+    background-color: #35b593;
+    color: #fefefe; }
+
+.comment-respond .comment-reply-title, .comment-respond > form p, .comment-respond > form label {
+  color: #157d7f; }
+
+a:visited {
+  color: #15e0a0; }
 
 /* style when hovering over button */
 /* styling for comments template */
