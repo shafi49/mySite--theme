@@ -17,23 +17,10 @@ get_header(); ?>
 			<header class="page-header">
 				<div class="container">
 					<?php 
-		// strip out the pre-generated "Day:"
-		// $modified_title=  str_replace ('Day:', '', $title);
+					$modified_title = str_replace('Day:', '', get_the_archive_title());
+					printf ('<h2 class="page-title">Posted on: %s</h2>', $modified_title);
 
-		// sprintf ('<h2 class="page-title">Posted on: %s </h2>', $modified_title);
-		// $title = single_term_title( '', false );
-		// printf ('<h2 class="page-title">Posted on: %s </h2>', single_term_title( '', false ));
-?>
-
-					<h2 class="page-title">
-						Posted on: 
-						<?php 
-						echo str_replace('Day:', '', get_the_archive_title());
-						?>
-
-					</h2>
-					<?php 
-		the_archive_description ('<div class="archive-description">', '</div>');
+					the_archive_description ('<div class="archive-description">', '</div>');
 
 		?>
 
