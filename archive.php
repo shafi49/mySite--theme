@@ -21,7 +21,16 @@ get_header(); ?>
 			<div class="container">
 				<?php 
 				// strip the Day: output in the_archive_title
+				// check if its a author archive
+				if (is_author()) {
+					$modified_title = str_replace ("Author:", '', get_the_archive_title());
+				// the_archive_title('<h2 class="page-title"> Written by: ', '</h2>');
+				printf('<h2 class="page-title">Written by: %s</h2>', $modified_title);
+				} else {
+
 				the_archive_title('<h2 class="page-title"> Posted on the ', '</h2>');
+
+				}
 				the_archive_description( '<div class="archive-description">', '</div>' );		
 				?>
 			</div>
