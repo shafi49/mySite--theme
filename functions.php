@@ -160,6 +160,8 @@ function mysite_scripts() {
 	wp_script_add_data( 'respond_js', 'conditional', 'lt IE 9' );
 	// main_js
 	wp_enqueue_script ('main_js', get_template_directory_uri() . '/assets/js/main.js', array ('util_js'), '', true);
+	// ajax_js
+	wp_enqueue_script ('ajax_js', get_template_directory_uri() . '/assets/js/ajax.js', array ('main_js'), '', true);
 }
 add_action( 'wp_enqueue_scripts', 'mysite_scripts' );
 
