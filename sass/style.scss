@@ -228,6 +228,53 @@ a:visited {
 	padding-top: 0;
 }
 
+// making sub menu
+// classes .menu-item.menu-item-has-children > 
+/* 
+ul.main-menu
+	li.menu-item
+	li.menu-item
+	************
+	li.menu-item.menu-item-has-children
+		ul.sub-menu
+			li.menu-item
+			li.menu-item
+			************
+*/
+
+// making sub menu little fatter
+
+.menu-item-has-children {
+		transition: all 900ms ease-in-out;
+		position: relative;
+		// overflow: visible;
+	&>ul.sub-menu {
+		display: none;
+		background-color: $primary-color;
+		color: $white;
+		transition: all 400ms ease-in-out;
+		transform: translate(-101%, -56%);
+
+		li > a {
+		padding: rem-calc(10) rem-calc(20px) rem-calc(10) rem-calc(20) !important;
+		&:hover {
+			
+		}
+		}		
+	}	
+ 	&:hover {
+		& > ul.sub-menu {
+			display: block;
+			position: fixed;
+			// top: 10%;
+			// left: 10%;
+			// transform: translate(-100%, -27%);
+			transition: all 400ms ease-in-out;
+		}
+	} 
+}
+
+
 .placeholder {
 	// @include foundation-button();
 	// @include button();

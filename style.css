@@ -3002,6 +3002,41 @@ div.nav-links a:visited {
 #main > .error-404.not-found > .container {
   padding-top: 0; }
 
+/* 
+ul.main-menu
+	li.menu-item
+	li.menu-item
+	************
+	li.menu-item.menu-item-has-children
+		ul.sub-menu
+			li.menu-item
+			li.menu-item
+			************
+*/
+.menu-item-has-children {
+  -webkit-transition: all 900ms ease-in-out;
+  -o-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+  position: relative; }
+  .menu-item-has-children > ul.sub-menu {
+    display: none;
+    background-color: #4ACAA8;
+    color: #fefefe;
+    -webkit-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    -webkit-transform: translate(-101%, -56%);
+    -ms-transform: translate(-101%, -56%);
+    transform: translate(-101%, -56%); }
+    .menu-item-has-children > ul.sub-menu li > a {
+      padding: 0.625rem 1.25rem 0.625rem 1.25rem !important; }
+  .menu-item-has-children:hover > ul.sub-menu {
+    display: block;
+    position: fixed;
+    -webkit-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out; }
+
 /* style when hovering over button */
 
 /*# sourceMappingURL=style.css.map */
