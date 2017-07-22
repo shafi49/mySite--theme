@@ -250,10 +250,20 @@ ul.main-menu
 		// overflow: visible;
 	&>ul.sub-menu {
 		display: none;
+		visibility: none;
 		background-color: $primary-color;
 		color: $white;
-		transition: all 400ms ease-in-out;
+		transition: visibility 400ms ease-in;
 		transform: translate(-101%, -56%);
+
+		li {
+			&:hover {
+				background-color: $white;
+				a {
+					color: $primary-color !important;
+				}
+			}
+		}
 
 		li > a {
 		padding: rem-calc(10) rem-calc(20px) rem-calc(10) rem-calc(20) !important;
@@ -265,11 +275,12 @@ ul.main-menu
  	&:hover {
 		& > ul.sub-menu {
 			display: block;
+			visibility: visible;
 			position: fixed;
 			// top: 10%;
 			// left: 10%;
 			// transform: translate(-100%, -27%);
-			transition: all 400ms ease-in-out;
+			transition: visibility 400ms ease-in;
 		}
 	} 
 }

@@ -3020,22 +3020,28 @@ ul.main-menu
   position: relative; }
   .menu-item-has-children > ul.sub-menu {
     display: none;
+    visibility: none;
     background-color: #4ACAA8;
     color: #fefefe;
-    -webkit-transition: all 400ms ease-in-out;
-    -o-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
+    -webkit-transition: visibility 400ms ease-in;
+    -o-transition: visibility 400ms ease-in;
+    transition: visibility 400ms ease-in;
     -webkit-transform: translate(-101%, -56%);
     -ms-transform: translate(-101%, -56%);
     transform: translate(-101%, -56%); }
+    .menu-item-has-children > ul.sub-menu li:hover {
+      background-color: #fefefe; }
+      .menu-item-has-children > ul.sub-menu li:hover a {
+        color: #4ACAA8 !important; }
     .menu-item-has-children > ul.sub-menu li > a {
       padding: 0.625rem 1.25rem 0.625rem 1.25rem !important; }
   .menu-item-has-children:hover > ul.sub-menu {
     display: block;
+    visibility: visible;
     position: fixed;
-    -webkit-transition: all 400ms ease-in-out;
-    -o-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out; }
+    -webkit-transition: visibility 400ms ease-in;
+    -o-transition: visibility 400ms ease-in;
+    transition: visibility 400ms ease-in; }
 
 /* style when hovering over button */
 
