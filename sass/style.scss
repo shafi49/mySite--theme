@@ -131,6 +131,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 // target all container elements
 
 #main {
+			margin-top: rem-calc(24px);
 	> section {
 	@extend .bg_graphic;
 	border-top: solid rem-calc(55px) #fffcfc;
@@ -320,6 +321,14 @@ ul.main-menu
 			transition: opacity .4s ease-in;
 		}
 	} 
+}
+
+// comment area 
+#comments {
+	textarea, input:not([type=submit]) {
+		background-color: rgba(102, 117, 11, 0.18);
+		// border: 1px solid white;
+	}
 }
 
 .main_footer {

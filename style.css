@@ -2902,10 +2902,12 @@ input[type="button"]:disabled,
   #header nav ul li {
     border-top: 1px solid #fefefe; }
 
-#main > section {
-  border-top: solid 3.4375rem #fffcfc;
-  -webkit-box-shadow: -6px 7px 10px #bfbfbf;
-  box-shadow: -6px 7px 10px #bfbfbf; }
+#main {
+  margin-top: 1.5rem; }
+  #main > section {
+    border-top: solid 3.4375rem #fffcfc;
+    -webkit-box-shadow: -6px 7px 10px #bfbfbf;
+    box-shadow: -6px 7px 10px #bfbfbf; }
 
 /* Make sure there is no white line under logo link */
 .custom-logo-link {
@@ -3057,6 +3059,9 @@ ul.main-menu
     -webkit-transition: opacity .4s ease-in;
     -o-transition: opacity .4s ease-in;
     transition: opacity .4s ease-in; }
+
+#comments textarea, #comments input:not([type=submit]) {
+  background-color: rgba(102, 117, 11, 0.18); }
 
 .main_footer > #footer {
   color: #fefefe;
