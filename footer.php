@@ -14,13 +14,15 @@
 	
 
 		<!-- Footer -->
-			<section id="footer">
-				<div class="container">
-					<ul class="copyright">
-						<li>&copy; Shafi. All rights reserved.</li><li>My Site by <a href="<?php echo esc_url(home_url('/')) ; ?>">Sailor</a></li>
-					</ul>
-				</div>
-			</section>
+			<footer class="main_footer">
+				<section id="footer">
+					<div class="container">
+						<ul class="copyright">
+							<li>&copy; Shafi. All rights reserved.</li><li>My Site by <a href="<?php echo esc_url(home_url('/')) ; ?>">Sailor</a></li>
+						</ul>
+					</div>
+				</section>
+			</footer>
 
 </div>
 <!-- div.wrapper end -->

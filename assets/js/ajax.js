@@ -10,14 +10,19 @@
 
   // url's to be targeted
   // ^= (*prefixed by*) // $= (*suffixed by*)
-  var $links = $("a[href^='" + siteUrl + "']:not(href*=/wp-admin/):not(href$=/feed/)");
-  // action on these links
-  $links.click(function () {
-    // replace the # sign from the url
+/*   var $links = $("a[href^='" + siteUrl + "']:not([href*=/wp-admin/]):not([href*=/wp-login.php]):not([href$=/feed/]))";
+  // // action on these links
+   $links.click(function () {
+  //   // replace the # sign from the url
+     location.hash = this.pathname;
+     return false;
+   });
+ */
+ $(document).delegate("a[href^='"+siteUrl+"']:not([href*=/wp-admin/]):not([href*=/wp-login.php]):not([href$=/feed/])", "click", function() {
     location.hash = this.pathname;
     return false;
-  });
-
+});
+ 
   var $searchForm = $('#searchform');
   // click handler for search form
   $searchForm.click(function (event) {

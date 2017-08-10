@@ -82,10 +82,16 @@
 		// Off-Canvas Navigation.
 
 			// Title Bar.
+				// dynamic titlebar
+				var titleBar = $('#logo').text();
+				if ( !titleBar ) {
+					titleBar = $('title').text();
+				}
+
 				$(
 					'<div id="titleBar">' +
 						'<a href="#header" class="toggle"></a>' +
-						'<span class="title">' + $('#logo').html() + '</span>' +
+						'<span class="title">' + titleBar + '</span>' +
 					'</div>'
 				)
 					.appendTo($body);

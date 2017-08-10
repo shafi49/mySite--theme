@@ -110,6 +110,34 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // mysite specific styles
 
+// custom body background
+
+.bg_graphic {
+	background-image: $background-graphic-memphis;
+		// background-blend-mode: multiply;
+
+}
+
+// header graphic
+
+#header {
+	background-image: $background-graphic-sakura;
+	background-blend-mode: multiply;
+	 nav ul li {
+		border-top: 1px solid $white;
+	}
+}
+
+// target all container elements
+
+#main {
+	> section {
+	@extend .bg_graphic;
+	border-top: solid rem-calc(55px) #fffcfc;
+  box-shadow: -6px 7px 10px #bfbfbf;
+	}
+}
+
 /* Make sure there is no white line under logo link */
 .custom-logo-link {
 	border-bottom: none;
@@ -120,22 +148,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	font-size: 2em;
 }
 
-/* footer in archive pages gets the full width */
-section#footer {
-	overflow: initial;
+// toggle menu color override in archive pages
+#titleBar .toggle:before {
+	background-color: $ocean-green;
 }
+
+
 /*  foundation button class */
 
 // button placeholder class
 %button {
 	@include button();
 }
+
 %button-small {
 	font-size: map-get($button-sizes, 'small');
 }
 .nav-links a {
 	@extend %button;
 	@extend %button-small;
+
+	// @extend .button;
 	// @extend .small;
 	// @extend .small;
 	// @include button-hollow();
@@ -250,10 +283,13 @@ ul.main-menu
 		// overflow: visible;
 	&>ul.sub-menu {
 		display: none;
-		visibility: none;
+		// visibility: none;
+		opacity: 0;
 		background-color: $primary-color;
+		background-image: $background-graphic-sakura;
+		background-blend-mode: multiply;
 		color: $white;
-		transition: visibility 400ms ease-in;
+		transition: opacity .4s	 ease-in;
 		transform: translate(-101%, -56%);
 
 		li {
@@ -275,14 +311,26 @@ ul.main-menu
  	&:hover {
 		& > ul.sub-menu {
 			display: block;
-			visibility: visible;
+			// visibility: visible;
+			opacity: 1;
 			position: fixed;
 			// top: 10%;
 			// left: 10%;
 			// transform: translate(-100%, -27%);
-			transition: visibility 400ms ease-in;
+			transition: opacity .4s ease-in;
 		}
 	} 
+}
+
+.main_footer {
+	> #footer {
+		color: $white;
+		margin-top: rem-calc(85px);
+		overflow: visible;
+		background-image: $background-graphic-doodles;
+			background-blend-mode: multiply;
+		background-color: rgba(74, 178, 140, 0.64);
+	}
 }
 
 

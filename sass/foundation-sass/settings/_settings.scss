@@ -76,15 +76,7 @@ $foundation-palette: (
   alert: #fe5722,
   visited: #83bdae
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
-// custom colors
-$turquoise: #47DEE1;
-$zanah: #c8e6c9;
-$teal: teal;
+// all colors are here 'variables-site/colors'
 
 $body-background: $white;
 $body-font-color: $black;
@@ -820,7 +812,8 @@ $thumbnail-radius: $global-radius;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: $evening-sea;
+// $titlebar-background: $black;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;

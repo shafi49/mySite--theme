@@ -2893,6 +2893,20 @@ input[type="button"]:disabled,
  * Licensed under MIT Open Source
  */
 /* foundation normalize */
+.bg_graphic, #main > section {
+  background-image: url("./assets/images/memphis-colorful.png"); }
+
+#header {
+  background-image: url("./assets/images/sakura.png");
+  background-blend-mode: multiply; }
+  #header nav ul li {
+    border-top: 1px solid #fefefe; }
+
+#main > section {
+  border-top: solid 3.4375rem #fffcfc;
+  -webkit-box-shadow: -6px 7px 10px #bfbfbf;
+  box-shadow: -6px 7px 10px #bfbfbf; }
+
 /* Make sure there is no white line under logo link */
 .custom-logo-link {
   border-bottom: none; }
@@ -2901,9 +2915,8 @@ input[type="button"]:disabled,
 .entry-header .entry-title {
   font-size: 2em; }
 
-/* footer in archive pages gets the full width */
-section#footer {
-  overflow: initial; }
+#titleBar .toggle:before {
+  background-color: #3c937c; }
 
 /*  foundation button class */
 .nav-links a, .comment-form input[type="submit"], form.search-form input[type="submit"] {
@@ -3020,12 +3033,14 @@ ul.main-menu
   position: relative; }
   .menu-item-has-children > ul.sub-menu {
     display: none;
-    visibility: none;
+    opacity: 0;
     background-color: #4ACAA8;
+    background-image: url("./assets/images/sakura.png");
+    background-blend-mode: multiply;
     color: #fefefe;
-    -webkit-transition: visibility 400ms ease-in;
-    -o-transition: visibility 400ms ease-in;
-    transition: visibility 400ms ease-in;
+    -webkit-transition: opacity .4s	 ease-in;
+    -o-transition: opacity .4s	 ease-in;
+    transition: opacity .4s	 ease-in;
     -webkit-transform: translate(-101%, -56%);
     -ms-transform: translate(-101%, -56%);
     transform: translate(-101%, -56%); }
@@ -3037,11 +3052,19 @@ ul.main-menu
       padding: 0.625rem 1.25rem 0.625rem 1.25rem !important; }
   .menu-item-has-children:hover > ul.sub-menu {
     display: block;
-    visibility: visible;
+    opacity: 1;
     position: fixed;
-    -webkit-transition: visibility 400ms ease-in;
-    -o-transition: visibility 400ms ease-in;
-    transition: visibility 400ms ease-in; }
+    -webkit-transition: opacity .4s ease-in;
+    -o-transition: opacity .4s ease-in;
+    transition: opacity .4s ease-in; }
+
+.main_footer > #footer {
+  color: #fefefe;
+  margin-top: 5.3125rem;
+  overflow: visible;
+  background-image: url("./assets/images/doodles.png");
+  background-blend-mode: multiply;
+  background-color: rgba(74, 178, 140, 0.64); }
 
 /* style when hovering over button */
 

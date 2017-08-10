@@ -19,7 +19,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class();?> >
+	<body <?php body_class('bg_graphic');?> >
 
 		<!-- Header -->
 		<section id="header">

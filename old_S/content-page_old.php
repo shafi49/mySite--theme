@@ -9,29 +9,25 @@
 
 ?>
 
-	<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="container">
-			<div class="entry-header">
-				<header class="entry-header">
-					<?php
-				the_title('<h1 class="entry-title">', '</h1>');
-				?>
-				</header>
-				<div class="entry-content">
-					<?php
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<?php
 			the_content();
-	
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mysite' ),
 				'after'  => '</div>',
 			) );
 		?>
-				</div>
-				<!-- .entry-content -->
+	</div><!-- .entry-content -->
 
-				<?php if ( get_edit_post_link() ) : ?>
-				<footer class="entry-footer">
-					<?php
+	<?php if ( get_edit_post_link() ) : ?>
+		<footer class="entry-footer">
+			<?php
 				edit_post_link(
 					sprintf(
 						wp_kses(
@@ -49,9 +45,6 @@
 					'</span>'
 				);
 			?>
-				</footer>
-				<!-- .entry-footer -->
-				<?php endif; ?>
-			</div>
-	</section>
-	<!-- #post-<?php // the_ID(); ?> -->
+		</footer><!-- .entry-footer -->
+	<?php endif; ?>
+</article><!-- #post-<?php the_ID(); ?> -->

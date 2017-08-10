@@ -117,11 +117,11 @@ function mysite_widgets_init() {
 add_action( 'widgets_init', 'mysite_widgets_init' );
 
 // update wordpress jQuery
-function mysite_update_jquery () {
+/*  function mysite_update_jquery () {
 	wp_deregister_script ('jquery');
 	wp_enqueue_script ('jquery', get_template_directory_uri() . '/assets/js/jquery-3.2.1.js', array(), '3.2.1', true);
 }
-add_filter ('wp_enqueue_scripts', 'mysite_update_jquery');
+add_filter ('wp_enqueue_scripts', 'mysite_update_jquery');  */
 /**
  * Enqueue scripts and styles.
  */
@@ -153,7 +153,7 @@ function mysite_scripts() {
 	// load above script only if lower than IE 9
 	wp_script_add_data( 'html5shiv_js', 'conditional', 'lt IE 9' );
 	// scrollzer_js
-	// wp_enqueue_script ('scrollzer_js', get_template_directory_uri() . '/assets/js/jquery.scrollzer.min.js', array('jquery'), '', true);
+	wp_enqueue_script ('scrollzer_js', get_template_directory_uri() . '/assets/js/jquery.scrollzer.min.js', array('jquery'), '', true);
 	//scrolly_js
 	wp_enqueue_script ('scrolly_js', get_template_directory_uri() . '/assets/js/jquery.scrolly.min.js', array('scrollzer_js'), '', true);
 	//skel_js
