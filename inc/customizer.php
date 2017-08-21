@@ -28,6 +28,10 @@ function mysite_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'mysite_customize_register' );
 
+// add custom theme customizer
+require_once('custom_customizer.php');
+
+
 /**
  * Render the site title for the selective refresh partial.
  *
@@ -53,3 +57,5 @@ function mysite_customize_preview_js() {
 	wp_enqueue_script( 'mysite-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'mysite_customize_preview_js' );
+
+

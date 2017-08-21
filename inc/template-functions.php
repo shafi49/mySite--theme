@@ -12,9 +12,16 @@
  * @return array
  */
 function mysite_body_classes( $classes ) {
+	// add a class bg_graphic to the body
+	$classes[] = 'bg_graphic';
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
+	}
+
+	// add a 'front-page' class to the front-page
+	if ( is_front_page() ) {
+		$classes[] = 'front-page';
 	}
 
 	return $classes;

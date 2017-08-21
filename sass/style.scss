@@ -112,6 +112,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // custom body background
 
+// site banner
+// this class will be applied to front-page only
+.front-page {
+	#one:before {
+		background-image: $site-banner;
+	}
+}
+
 .bg_graphic {
 	background-image: $background-graphic-memphis;
 		// background-blend-mode: multiply;
@@ -119,6 +127,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 // header graphic
+
+
 
 #header {
 	background-image: $background-graphic-sakura;
@@ -129,6 +139,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 // target all container elements
+
+// remove top margin from front-page
+.front-page {
+	#main {
+		margin-top: rem-calc(0px);
+	}
+} 
 
 #main {
 			margin-top: rem-calc(24px);
@@ -343,10 +360,5 @@ ul.main-menu
 }
 
 
-.placeholder {
-	// @include foundation-button();
-	// @include button();
-	// font-size: map-get($button-sizes, 'small');
-}
 
 /* style when hovering over button */
