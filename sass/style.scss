@@ -114,11 +114,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // site banner
 // this class will be applied to front-page only
-.front-page {
+
+.static-front-page {
 	#one:before {
 		background-image: $site-banner;
+		background-blend-mode: multiply;
+		background-color: $gossip;
 	}
 }
+
 
 .bg_graphic {
 	background-image: $background-graphic-memphis;
@@ -141,7 +145,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 // target all container elements
 
 // remove top margin from front-page
-.front-page {
+.static-front-page {
 	#main {
 		margin-top: rem-calc(0px);
 	}

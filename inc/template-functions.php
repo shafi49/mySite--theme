@@ -19,9 +19,9 @@ function mysite_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// add a 'front-page' class to the front-page
-	if ( is_front_page() ) {
-		$classes[] = 'front-page';
+	// add a 'front-page' class to the frontpage page template
+	if ( is_page_template( 'site-frontpage.php' ) ) {
+		$classes[] = 'static-front-page';
 	}
 
 	return $classes;
@@ -37,3 +37,5 @@ function mysite_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'mysite_pingback_header' );
+
+

@@ -2559,7 +2559,7 @@ input[type="button"]:disabled,
 
 /* One */
 #one:before {
-  background-image: url("../../images/banner.jpg");
+  /* background-image: url("../../images/banner.jpg"); */
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2893,8 +2893,10 @@ input[type="button"]:disabled,
  * Licensed under MIT Open Source
  */
 /* foundation normalize */
-.front-page #one:before {
-  background-image: url("./assets/images/banner.jpg"); }
+.static-front-page #one:before {
+  background-image: url("./assets/images/A sureal contrast.jpg");
+  background-blend-mode: multiply;
+  background-color: #b9f9b9; }
 
 .bg_graphic, #main > section {
   background-image: url("./assets/images/memphis-colorful.png"); }
@@ -2905,7 +2907,7 @@ input[type="button"]:disabled,
   #header nav ul li {
     border-top: 1px solid #fefefe; }
 
-.front-page #main {
+.static-front-page #main {
   margin-top: 0; }
 
 #main {

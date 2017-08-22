@@ -29,7 +29,7 @@ function mysite_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'mysite_customize_register' );
 
 // add custom theme customizer
-require_once('custom_customizer.php');
+// require_once('custom_customizer.php');
 
 
 /**
