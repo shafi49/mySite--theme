@@ -83,8 +83,9 @@ get_header();
 							<div class="container">
 								<h3>Contact Me</h3>
 								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-								<?php echo do_shortcode( '[contact-form-7 id="1720" title="Contact form 1"]' )?>
-								
+								<?php if ( shortcode_exists( 'contact-form-7' )) : ?>
+									<?php echo do_shortcode( '[contact-form-7 id="1720" title="Contact form 1"]' )?>
+								<?php endif; ?>
 							</div>
 						</section>
 

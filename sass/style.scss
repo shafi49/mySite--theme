@@ -155,10 +155,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 } 
 
 #main {
-			margin-top: rem-calc(24px);
+			// margin-top: rem-calc(24px);
 	> section {
+		&:first-child {
+			// margin-top: rem-calc(16px);
+		}
 	@extend .bg_graphic;
-	border-top: solid rem-calc(55px) #fffcfc;
+	border-top: solid 0px #fffcfc;
   box-shadow: -6px 7px 10px #bfbfbf;
 	}
 }
@@ -186,6 +189,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 }
 
 
+// blog posts page name
 /*  foundation button class */
 
 // button placeholder class

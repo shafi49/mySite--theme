@@ -15,11 +15,17 @@
 get_header(); ?>
 <!-- div.wrapper in header.php -->
 		<!-- Main -->
-		<div id="main">
+		<div id="main" class="site-main">
 <?php if (have_posts() ) :?>
 					<?php if (is_home() && ! is_front_page() ) : ?>
-					<header class="major">
-						<h2><?php single_post_title(); ?></h2>
+					<div class="container full-width">
+						<header class="major">
+							<h2><?php single_post_title(); ?></h2>
+							
+						</header>	
+
+					</div>
+			
 						<?php endif; 
 							/* start the loop */
 								while (have_posts() ) : the_post();
