@@ -146,6 +146,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 // remove top margin from front-page
 .static-front-page {
+	h3 {
+		color: $puerto-rico;
+	}
 	#main {
 		margin-top: rem-calc(0px);
 	}
@@ -157,6 +160,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	@extend .bg_graphic;
 	border-top: solid rem-calc(55px) #fffcfc;
   box-shadow: -6px 7px 10px #bfbfbf;
+	}
+}
+
+// features section logo
+.features {
+	.fa {
+		font-size: 10rem;
 	}
 }
 
@@ -196,6 +206,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	// @include button-hollow();
 	// color: $primary-color;
 	margin: 0 1rem 0rem 1rem;
+}
+
+// contact form 7 button
+div[role="form"] {
+	input[type="submit"] {
+		@extend %button;
+		@extend %button;
+	}
 }
 
 /* styling for comments template */

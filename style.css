@@ -2907,6 +2907,9 @@ input[type="button"]:disabled,
   #header nav ul li {
     border-top: 1px solid #fefefe; }
 
+.static-front-page h3 {
+  color: #4acaa8; }
+
 .static-front-page #main {
   margin-top: 0; }
 
@@ -2916,6 +2919,9 @@ input[type="button"]:disabled,
     border-top: solid 3.4375rem #fffcfc;
     -webkit-box-shadow: -6px 7px 10px #bfbfbf;
     box-shadow: -6px 7px 10px #bfbfbf; }
+
+.features .fa {
+  font-size: 10rem; }
 
 /* Make sure there is no white line under logo link */
 .custom-logo-link {
@@ -2929,7 +2935,7 @@ input[type="button"]:disabled,
   background-color: #3c937c; }
 
 /*  foundation button class */
-.nav-links a, .comment-form input[type="submit"], form.search-form input[type="submit"] {
+.nav-links a, div[role="form"] input[type="submit"], .comment-form input[type="submit"], form.search-form input[type="submit"] {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -2947,9 +2953,9 @@ input[type="button"]:disabled,
   cursor: pointer;
   background-color: #4ACAA8;
   color: #fefefe; }
-  [data-whatinput='mouse'] .nav-links a, .nav-links [data-whatinput='mouse'] a, [data-whatinput='mouse'] .comment-form input[type="submit"], .comment-form [data-whatinput='mouse'] input[type="submit"], [data-whatinput='mouse'] form.search-form input[type="submit"], form.search-form [data-whatinput='mouse'] input[type="submit"] {
+  [data-whatinput='mouse'] .nav-links a, .nav-links [data-whatinput='mouse'] a, [data-whatinput='mouse'] div[role="form"] input[type="submit"], div[role="form"] [data-whatinput='mouse'] input[type="submit"], [data-whatinput='mouse'] .comment-form input[type="submit"], .comment-form [data-whatinput='mouse'] input[type="submit"], [data-whatinput='mouse'] form.search-form input[type="submit"], form.search-form [data-whatinput='mouse'] input[type="submit"] {
     outline: 0; }
-  .nav-links a:hover, .comment-form input[type="submit"]:hover, form.search-form input[type="submit"]:hover, .nav-links a:focus, .comment-form input[type="submit"]:focus, form.search-form input[type="submit"]:focus {
+  .nav-links a:hover, div[role="form"] input[type="submit"]:hover, .comment-form input[type="submit"]:hover, form.search-form input[type="submit"]:hover, .nav-links a:focus, div[role="form"] input[type="submit"]:focus, .comment-form input[type="submit"]:focus, form.search-form input[type="submit"]:focus {
     background-color: #35b593;
     color: #fefefe; }
 
