@@ -35,11 +35,25 @@ get_header();
 							<div class="container">
 								<h3>Things I Can Do</h3>
 								<ul class="feature-icons">
-									<li class="fa-code">Write all the code</li>
+									<?php 
+										// get all skills post data and show it in here
+										$skills_query_args = array(
+											'post_type' => 'skills',
+										);
+										$skills_query = new WP_Query($skills_query_args);
+										// var_dump($skills_query);
+
+										if ($skills_query -> have_posts()) : while ($skills_query -> have_posts() ) : $skills_query -> the_post();
+
+									?>
+									<li class="fa-code"><?php echo $skills_query -> get_the_title(); ?></li>
+									<?php endwhile; endif; ?>
+									<?php wp_reset_postdata(); ?>
+<!-- 									<li class="fa-code">Write all the code</li>
 									<li class="fa-cubes">Stack small boxes</li>
 									<li class="fa-book">Read books and stuff</li>
 									<li class="fa-coffee">Drink much coffee</li>
-									<li class="fa-bolt">Code Lightning bolt websites</li>
+									<li class="fa-bolt">Code Lightning bolt websites</li> -->
 								</ul>
 							</div>
 						</section>
