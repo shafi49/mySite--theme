@@ -10,105 +10,92 @@ get_header();
 ?>
 <!-- header -->
 <!-- Header -->
-    
 
-		<!-- Wrapper -->
-			
 
-			<!-- Main -->
-				<div id="main">
+<!-- Wrapper -->
 
-					<!-- One -->
-						<section id="one">
-							<div class="container">
-								<header class="major">
-									<h2>Welcome!</h2>
-									<p>This is web developer Shafi's personal internet space<br />
-									</p>
-								</header>
-								<p>I ❤ surfing and desiging websites</p>
-							</div>
-						</section>
 
-					<!-- Two -->
-						<section id="two">
-							<div class="container">
-								<h3>Things I Can Do</h3>
-								<ul class="feature-icons">
-									<?php 
-										// get all skills post data and show it in here
-										$skills_query_args = array(
-											'post_type' => 'skills',
-										);
-										$skills_query = new WP_Query($skills_query_args);
-										// var_dump($skills_query);
+<!-- Main -->
+<div id="main">
 
-										if ($skills_query -> have_posts()) : while ($skills_query -> have_posts() ) : $skills_query -> the_post();
+	<!-- One -->
+	<section id="one">
+		<div class="container">
+			<header class="major">
+				<h2>Welcome!</h2>
+				<p>This is web developer Shafi's personal internet space<br />
+				</p>
+			</header>
+			<p>I ❤ surfing and desiging websites</p>
+		</div>
+	</section>
 
-									?>
-									<li class="fa-code"><?php echo $skills_query -> get_the_title(); ?></li>
-									<?php endwhile; endif; ?>
-									<?php wp_reset_postdata(); ?>
-<!-- 									<li class="fa-code">Write all the code</li>
-									<li class="fa-cubes">Stack small boxes</li>
-									<li class="fa-book">Read books and stuff</li>
-									<li class="fa-coffee">Drink much coffee</li>
-									<li class="fa-bolt">Code Lightning bolt websites</li> -->
-								</ul>
-							</div>
-						</section>
+	<!-- Two -->
+	<section id="two">
+		<div class="container">
+			<h3>Things I Can Do</h3>
+			<ul class="feature-icons">
+				<li class="fa-code">Write all the code</li>
+				<li class="fa-cubes">Stack small boxes</li>
+				<li class="fa-book">Read books and stuff</li>
+				<li class="fa-coffee">Drink much coffee</li>
+				<li class="fa-bolt">Code Lightning bolt websites</li>
+			</ul>
+		</div>
+	</section>
 
-					<!-- Three -->
-						<section id="three">
-							<div class="container">
-								<h3>My skills</h3>
-								<p>I have pretty solid understanding about these technologies</p>
-								<div class="features">
-									<article>
-										<a href="#" class="image"><i class="fa fa-html5" aria-hidden="true"></i>
+	<!-- Three -->
+	<section id="three">
+		<div class="container">
+			<h3>My skills</h3>
+			<p>I have pretty solid understanding about these technologies</p>
+			<div class="features">
+				<article>
+					<a href="#" class="image"><i class="fa fa-html5" aria-hidden="true"></i>
 </a>
-										<div class="inner">
-											<h4>HTML</h4>
-											<p>The markup language that every web browser understands. </p>
-										</div>
-									</article>
-									<article>
-										<a href="#" class="image"><i class="fa fa-css3" aria-hidden="true"></i>
+					<div class="inner">
+						<h4>HTML</h4>
+						<p>The markup language that every web browser understands. </p>
+					</div>
+				</article>
+				<article>
+					<a href="#" class="image"><i class="fa fa-css3" aria-hidden="true"></i>
 </a>
-										<div class="inner">
-											<h4>CSS</h4>
-											<p>The beauty rules of web browsers!</p>
-										</div>
-									</article>
-									<article>
-										<a href="#" class="image"><i class="fa fa-code" aria-hidden="true"></i>
+					<div class="inner">
+						<h4>CSS</h4>
+						<p>The beauty rules of web browsers!</p>
+					</div>
+				</article>
+				<article>
+					<a href="#" class="image"><i class="fa fa-code" aria-hidden="true"></i>
 </a>
-										<div class="inner">
-											<h4>JavaScript</h4>
-											<p>The logic behind all interactions happening inside browsers.</p>
-										</div>
-									</article>
-								</div>
-							</div>
-						</section>
+					<div class="inner">
+						<h4>JavaScript</h4>
+						<p>The logic behind all interactions happening inside browsers.</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
 
-					<!-- Four -->
-						<section id="four">
-							<div class="container">
-								<h3>Contact Me</h3>
-								<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-								<?php if ( shortcode_exists( 'contact-form-7' )) : ?>
-									<?php echo do_shortcode( '[contact-form-7 id="1720" title="Contact form 1"]' )?>
-								<?php endif; ?>
-							</div>
-						</section>
+	<!-- Four -->
+	<section id="four">
+		<div class="container">
+			<h3>Contact Me</h3>
+			<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum
+				integer. Integer eu ante ornare amet commetus.</p>
+			<?php if ( shortcode_exists( 'contact-form-7' )) : ?>
+			<?php echo do_shortcode( '[contact-form-7 id="1720" title="Contact form 1"]' )?>
+			<?php endif; ?>
+		</div>
+	</section>
 
-				</div>
+</div>
 
-			<!-- Footer -->
+<!-- Footer -->
 
-		
 
-      <!-- footer -->
-      <?php get_footer(); ?>
-      <!-- footer -->
+
+<!-- footer -->
+<?php get_footer(); ?>
+<!-- footer -->
